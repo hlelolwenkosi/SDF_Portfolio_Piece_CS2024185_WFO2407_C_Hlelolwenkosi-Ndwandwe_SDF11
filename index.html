@@ -33,13 +33,13 @@
         <div class="px-4">
             <img class="h-8" src="./assets/component-1/navigation/cache-bank-logo.png">
         </div>
-        <div class="md:flex items-center justify-between text-black gap-12"> 
-            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Product</a>
-            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Features</a>
-            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Get Started</a>
-            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
+        <div class="hidden md:flex items-center justify-between text-black gap-12"> 
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Product">Product</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Features">Features</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Pricing">Pricing</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Company">Company</a>
         </div>
-        <div class="gap-8 p-4 items-center md:flex">
+        <div class=" hidden gap-8 p-4 items-center md:flex">
             <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
             <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500"> Sign Up</button>
         </div>
@@ -72,37 +72,66 @@
             </defs>
           </svg>
         </button>
-        <div class="absolute md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main" id="mobile-view">
-            <div class="md:flex items-center justify-between text-black gap-12"> 
-                <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Product</a>
-                <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Features</a>
-                <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Get Started</a>
-                <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
-            </div>
-            <div class="gap-8 p-4 items-center md:flex">
+        <div class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main" id="mobile-menu">
+            
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Product">Product</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Features">Features</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Pricing">Pricing</a>
+            <a class="text-sm font normal text-dark-grey-700 hover:text-dark-grey-900" href="#Company">Company</a>
+            
                 <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
                 <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500"> Sign Up</button>
+            
+        </div>
+        </div>
+        <!--COMPONENT 2--> 
+        <!--Hero-->
+        <div class=" grid w-full grid-col-1 my-auto mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="Product">
+        <div class="flex flex-col justify-center col-span-1 text-center lg:text-start"> 
+            <h1 class=" mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
+                The Clever Place to Keep Your Cache
+            </h1>
+            <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-grey-900"> 
+                Cache Bank is designed exclusively for software developers.We understand your financial needs are unique as the code you write.
+                 Our services offer cutting-edge financial solutions that help you take care of your cash.
+            </p>
+            <div class="flex flex-col items-center gap-4 lg:flex-row">
+                <button class=" flex items-centre py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">
+                    Join Cache Now
+                </button>
+                <button class=" flex items-centre py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">
+                    Join Our Discord Server
+                </button>
+            </div>
+            <div class="items-center justify-end hidden col-span-1 md:flex">
+                <img src=""
             </div>
         </div>
-        </div>
-        <div class="w-full">
         <!-- Wide full-width container for additional content -->
         </div>
-         <div class="container mx-auto">
+        <!--COMPONENT 3-->
+         <div class="container mx-auto" id="Features" >
         <!-- Centered container for more content -->
          </div>
-        <div class="w-full">
+        
+         <!--COMPONENT 4-->
+        <div class="w-full" id="Pricing">
         <!-- Wide full-width container for additional content -->
         </div>
-        <div class="w-full">
+        <!--COMPONENT 5-->
+        <div class="w-full" id="Company">
         <!-- Wide full-width container for additional content -->
          </div>
+         <!--FOOTER-->
         <div class="w-full bg-green-500">
         <!-- Full-width footer container with green background -->
          </div>
     </div>
     <script> 
-        document.getElementById("mobile-menu-toggle").addEventListener("click",function() {document.getElementById("mobile-menu").classList.toggle})
+        document.getElementById("mobile-menu-toggle")
+        .addEventListener("click",function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
